@@ -46,7 +46,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400">
+            <span className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#d67d8a] to-[#e9a0aa]">
               Pathway to Equality
             </span>
           </motion.div>
@@ -66,7 +66,7 @@ const Header = () => {
                 className={cn(
                   "relative py-2 text-sm font-medium transition-colors",
                   location.pathname === item.path
-                    ? "text-primary"
+                    ? "text-[#d67d8a]"
                     : "text-foreground/80 hover:text-foreground"
                 )}
               >
@@ -74,7 +74,7 @@ const Header = () => {
                 {location.pathname === item.path && (
                   <motion.div
                     layoutId="navbar-indicator"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#d67d8a]"
                     transition={{ duration: 0.3 }}
                   />
                 )}
@@ -115,7 +115,7 @@ const Header = () => {
                   className={cn(
                     "block py-2 text-sm font-medium transition-colors",
                     location.pathname === item.path
-                      ? "text-primary"
+                      ? "text-[#d67d8a]"
                       : "text-foreground/80 hover:text-foreground"
                   )}
                 >
