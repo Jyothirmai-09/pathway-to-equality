@@ -46,7 +46,7 @@ const Contact = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col min-h-screen pt-24 px-4"
+      className="flex flex-col min-h-screen pt-24 px-4 bg-gradient-to-br from-[#FFDEE2]/40 to-white"
     >
       <div className="container mx-auto max-w-6xl">
         <motion.div
@@ -55,10 +55,10 @@ const Contact = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full mb-4">
+          <span className="inline-block px-3 py-1 text-xs font-medium bg-[#FFDEE2]/50 text-[#d67d8a] rounded-full mb-4">
             Get in Touch
           </span>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#d67d8a]">Contact Us</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Have questions or feedback? We'd love to hear from you. 
             Reach out to us through the form below or using our contact information.
@@ -70,16 +70,16 @@ const Contact = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="card-glass rounded-xl p-8"
+            className="bg-white/80 backdrop-blur-sm border border-[#FFDEE2]/50 shadow-lg rounded-xl p-8"
           >
-            <h2 className="text-xl font-semibold mb-6">Send us a message</h2>
+            <h2 className="text-xl font-semibold mb-6 text-[#d67d8a]">Send us a message</h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+                <label htmlFor="name" className="block text-sm font-medium mb-2 text-[#d67d8a]">Name</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <User className="h-4 w-4 text-muted-foreground" />
+                    <User className="h-4 w-4 text-[#d67d8a]" />
                   </div>
                   <input
                     type="text"
@@ -88,17 +88,17 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="block w-full pl-10 pr-4 py-3 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                    className="block w-full pl-10 pr-4 py-3 border border-[#FFDEE2]/70 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d67d8a] focus:border-transparent transition-all"
                     placeholder="Your name"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+                <label htmlFor="email" className="block text-sm font-medium mb-2 text-[#d67d8a]">Email</label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <Mail className="h-4 w-4 text-muted-foreground" />
+                    <Mail className="h-4 w-4 text-[#d67d8a]" />
                   </div>
                   <input
                     type="email"
@@ -107,14 +107,14 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="block w-full pl-10 pr-4 py-3 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                    className="block w-full pl-10 pr-4 py-3 border border-[#FFDEE2]/70 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d67d8a] focus:border-transparent transition-all"
                     placeholder="Your email"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+                <label htmlFor="message" className="block text-sm font-medium mb-2 text-[#d67d8a]">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -122,7 +122,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="block w-full p-4 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+                  className="block w-full p-4 border border-[#FFDEE2]/70 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d67d8a] focus:border-transparent transition-all resize-none"
                   placeholder="Your message"
                 />
               </div>
@@ -130,7 +130,7 @@ const Contact = () => {
               <Button 
                 type="submit" 
                 isLoading={isSubmitting}
-                className="w-full"
+                className="w-full bg-[#d67d8a] hover:bg-[#c56a77]"
                 icon={<Send className="h-4 w-4" />}
               >
                 Send Message
@@ -144,29 +144,29 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col justify-between"
           >
-            <div className="card-glass rounded-xl p-8 mb-8">
-              <h2 className="text-xl font-semibold mb-6">Contact Information</h2>
+            <div className="bg-white/80 backdrop-blur-sm border border-[#FFDEE2]/50 shadow-lg rounded-xl p-8 mb-8">
+              <h2 className="text-xl font-semibold mb-6 text-[#d67d8a]">Contact Information</h2>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <User className="h-5 w-5 text-primary" />
+                  <div className="bg-[#FFDEE2]/50 p-3 rounded-full">
+                    <User className="h-5 w-5 text-[#d67d8a]" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-sm mb-1">Name</h3>
+                    <h3 className="font-medium text-sm mb-1 text-[#d67d8a]">Name</h3>
                     <p className="text-muted-foreground">Seepana Jyothirmai</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <Mail className="h-5 w-5 text-primary" />
+                  <div className="bg-[#FFDEE2]/50 p-3 rounded-full">
+                    <Mail className="h-5 w-5 text-[#d67d8a]" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-sm mb-1">Email</h3>
+                    <h3 className="font-medium text-sm mb-1 text-[#d67d8a]">Email</h3>
                     <a 
                       href="mailto:seepanajyothirmai60@gmail.com" 
-                      className="text-primary hover:underline transition-all"
+                      className="text-[#d67d8a] hover:underline transition-all"
                     >
                       seepanajyothirmai60@gmail.com
                     </a>
@@ -174,16 +174,16 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <Linkedin className="h-5 w-5 text-primary" />
+                  <div className="bg-[#FFDEE2]/50 p-3 rounded-full">
+                    <Linkedin className="h-5 w-5 text-[#d67d8a]" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-sm mb-1">LinkedIn</h3>
+                    <h3 className="font-medium text-sm mb-1 text-[#d67d8a]">LinkedIn</h3>
                     <a 
                       href="https://www.linkedin.com/in/jyothirmai-seepana-0b57192b8" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-primary hover:underline transition-all"
+                      className="text-[#d67d8a] hover:underline transition-all"
                     >
                       linkedin.com/in/jyothirmai-seepana-0b57192b8
                     </a>
@@ -196,9 +196,9 @@ const Contact = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="card-glass rounded-xl p-8"
+              className="bg-white/80 backdrop-blur-sm border border-[#FFDEE2]/50 shadow-lg rounded-xl p-8"
             >
-              <h2 className="text-xl font-semibold mb-4">Our Mission</h2>
+              <h2 className="text-xl font-semibold mb-4 text-[#d67d8a]">Our Mission</h2>
               <p className="text-muted-foreground mb-4">
                 We're dedicated to empowering female students by providing equal access to educational resources 
                 and opportunities. Our AI mentor helps bridge the gap and guide students toward success in their 
